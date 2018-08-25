@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: nginx
 spec:
+  nodeSelector:
+    storage: ssd
   containers:
   - image: nginx
     name: nginx

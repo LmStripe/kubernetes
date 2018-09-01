@@ -9,14 +9,14 @@ spec:
   containers:
   - image: gcr.io/kuar-demo/kuard-amd64:1
     name: kuard
-    livenessProbe:
+    readinessProbe:
       httpGet:
-        path: /healthy
+        path: /ready
         port: 8080
-      initialDelaySeconds: 5
-      timeoutSeconds: 1
-      periodSeconds: 10
+      periodSeconds: 2
+      initialDelaySeconds: 0
       failureThreshold: 3
+      successThreshold: 1
     ports:
     - containerPort: 8080
       name: http

@@ -4,7 +4,9 @@ metadata:
   name: kubia
   labels:
     name: kubia
-    class: class3
+    app: kubia
+    version: 1
+    env: test
 spec:
   containers:
     - name: kubia
@@ -12,9 +14,4 @@ spec:
       ports:
       - name: http
         containerPort: 8080
-      readinessProbe:
-        exec:
-          command:
-          - ls
-          - /var/ready
 

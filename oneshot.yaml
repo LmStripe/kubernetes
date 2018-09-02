@@ -3,6 +3,8 @@ kind: Job
 metadata:
   name: oneshot
 spec:
+  parallelism: 5
+  completions: 10
   template:
     metadata:
       labels:
@@ -13,7 +15,7 @@ spec:
         - --keygen-enable
         - --keygen-exit-on-complete
         - --keygen-num-to-gen
-        - "100"
+        - "10"
         image: gcr.io/kuar-demo/kuard-amd64:1
         name: oneshot
       restartPolicy: OnFailure

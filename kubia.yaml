@@ -4,14 +4,11 @@ metadata:
   name: kubia
   labels:
     name: kubia
-    app: kubia
-    version: 1
-    env: test
 spec:
   containers:
-    - name: kubia
-      image: luksa/kubia
-      ports:
-      - name: http
-        containerPort: 8080
+  - name: kubia
+    image: luksa/kubia
+    ports:
+    - name: http
+      containerPort: 8080
 

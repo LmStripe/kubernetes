@@ -5,6 +5,8 @@ metadata:
   labels:
     name: kuard-pod
 spec:
+  nodeSelector:
+   kubernetes.io/hostname: node1 
   volumes:
     - name: "kuard-data"
       hostPath:

@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-com-ingress
+spec:
+  rules:
+  - host: example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kuard-service
+          servicePort: 8080
+      - path: /nginx
+        backend:
+          serviceName: nginx-service
+          servicePort: 80
+  - host: kubia.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kubia-service
+          servicePort: 8080

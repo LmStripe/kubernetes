@@ -30,5 +30,6 @@ spec:
       protocol: TCP
   volumes:
   - name: html
-    emptyDir: {}
-
+    emptyDir:
+      medium: Memory
+    # This will create the volume in memory

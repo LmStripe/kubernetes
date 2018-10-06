@@ -8,3 +8,5 @@ spec:
     name: centos
     stdin: true
     tty: true
+
+# kubectl run -i -t centos --image=centos

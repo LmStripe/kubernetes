@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  labels:
+    env: test
+    team: dev
   name: nginx
 spec:
-  nodeSelector:
-    storage: ssd
   containers:
   - image: nginx
     name: nginx

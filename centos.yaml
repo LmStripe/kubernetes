@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  label:
-    test: yes
+  labels:
     env: test
+    team: dev
   name: centos
 spec:
   containers:
